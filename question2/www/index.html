@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Kenalan App</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+
+   <!-- Custom styles for this template -->
+   <link href="css/navbar-fixed-top.css" rel="stylesheet">
+</head>
+
+<body>
+   <!-- Fixed navbar -->
+   <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+               aria-expanded="false" aria-controls="navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Kenalan App</a>
+         </div>
+
+         <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+               <li class="active"><a href="#">Home</a></li>
+               <li><a href="#contacts">Contacts</a></li>
+               <li><a href="#about">About</a></li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+               <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                     aria-expanded="false"><span id="idSpan"> <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                     <li><a href="#">Profile</a></li>
+                     <li><a href="#logout">Logout</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+         <!--/.nav-collapse -->
+      </div>
+   </nav>
+
+   <div class="container">
+
+      <!-- divHome-->
+      <div class="well" id="divHome" style="display: none">
+         <div class="row">
+            <div class="col-md-6" style="color: blue; background-color: yellow">
+               Column left
+            </div>
+            <div class="col-md-6" style="color: yellow; background-color: blue">
+               Column right
+            </div>
+         </div>
+      </div>
+
+      <!-- divContact-->
+      <div class="well" id="divContact" style="display: none">
+         <div class="row">
+            <div class="col-sm-12">
+               <a class="btn btn-primary" href="#btnAddContact" role="button">Add Contact</a>
+               <p></p>
+               <table class="table table-condensed table-stripped table-hover" id="tblContacts">
+                  <thead>
+                     <tr>
+                        <th>Index</th>
+                        <th>firstname</th>
+                        <th>Extension</th>
+                        <th>Jobtitle</th>
+                        <th>id</th>
+                        <th>email</th>
+                        <th>lastname</th>
+                        <th>Delete</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+
+      <!--div add contact form - div add contact-->
+      <div class="well" id="divAddContact" style="display: none">
+         <div class="row">
+            <div class="col-sm-6">
+               <form id="frmAddKenalan">
+
+                  <div class="col-lg-8 col-lg-offset-4">
+                     <h3>Enter Contact Details</h3>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="firstName" class="col-lg-4 control-label">First Name</label>
+                     <div class="col-lg-8">
+                        <input type="text" id="firstname" class="control-form" placeholder="Enter your firstname"
+                           required />
+                     </div>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="lastName" class="col-lg-4 control-label">Last Name</label>
+                     <div class="col-lg-8">
+                        <input type="text" id="lastname" class="control-form" placeholder="Enter your lastname"
+                           required />
+                     </div>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="phone" class="col-lg-4 control-label">Extension</label>
+                     <div class="col-lg-8">
+                        <input type="text" id="phone" class="control-form" placeholder="Enter your phone number"
+                           required />
+                     </div>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="email" class="col-lg-4 control-label">Email Address</label>
+                     <div class="col-lg-8">
+                        <input type="email" id="email" class="control-form"
+                           placeholder="Enter your contact email address" required />
+                     </div>
+                  </div>
+
+                  <div class="form-group">
+                     <div class="col-lg-8 col-lg-offset-4">
+                        <button type="submit" class="btn btn-success">Save Contact</button>
+                        <button type="reset" class="btn btn-info">Reset</button>
+                     </div>
+                  </div>
+
+               </form>
+            </div>
+         </div>
+      </div>
+
+
+      <!--div edit contact form - divEditContact-->
+      <div class="well" id="divEditContact" style="display: none">
+         <div class="row">
+            <div class="col-sm-6">
+               <form id="frmEditContact">
+
+                  <div class="col-lg-8 col-lg-offset-4">
+                     <h3>Modify Contact Details</h3>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="fname100" class="col-lg-4 control-label">Name</label>
+                     <div class="col-lg-8">
+                        <input type="text" id="fname100" class="control-form" placeholder="Enter your firstname"
+                           required />
+                     </div>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="phoneno100" class="col-lg-4 control-label">Phone No.</label>
+                     <div class="col-lg-8">
+                        <input type="text" id="phoneno100" class="control-form" placeholder="Enter your phone number"
+                           required />
+                     </div>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="emailadd100" class="col-lg-4 control-label">Email Address</label>
+                     <div class="col-lg-8">
+                        <input type="email" id="emailadd100" class="control-form"
+                           placeholder="Enter your contact email address" required />
+                     </div>
+                  </div>
+
+                  <div class="form-group">
+                     <input type="hidden" id="contactid"/>
+                     <div class="col-lg-8 col-lg-offset-4">
+                        <button type="submit" class="btn btn-success">Update Contact</button>
+                        <button type="reset" class="btn btn-info">Reset</button>
+                     </div>
+                  </div>
+
+               </form>
+            </div>
+         </div>
+      </div>
+
+      <!-- nav-->
+      <nav class="navbar navbar-default navbar-fixed-bottom">
+         <div class="container">
+            <!--div class="well"-->
+            <div class="row">
+               <div class="col-md-12">
+                  Footer
+               </div>
+            </div>
+         </div>
+   </div>
+   </div>
+   </nav>
+
+   <script src="js/jquery-3.2.1.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/signals.min.js"></script>
+   <script src="js/hasher.min.js"></script>
+   <script src="js/crossroads.min.js"></script>
+   <script src="js/bootbox.min.js"></script>
+   <script src="js/index.js"></script>
+</body>
+
+</html>
